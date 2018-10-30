@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rel"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#f1f3f5"
+        android:layout_alignParentBottom="true"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutlink"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/green_900"
+            android:textSize="16dp"
+            android:text="About Link"
+            android:id="@+id/link_name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/sos"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@+id/aboutlink"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:textColor="@color/genre"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0.33"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Review Subject"
+            android:layout_weight="0.67"
+            android:id="@+id/sos1"
+            android:textColor="@color/link" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Phone:"
+            android:id="@+id/phone2"
+            android:visibility="gone"
+            android:textColor="@color/genre"
+            android:layout_weight="0.33"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Review Subject"
+            android:layout_weight="0.67"
+            android:id="@+id/sos2"
+            android:textColor="@color/link"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Review Subject"
+        android:id="@+id/ulink"
+        android:visibility="gone"
+        android:textColor="@color/link"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/aboutlink" />
+
+
+</RelativeLayout>

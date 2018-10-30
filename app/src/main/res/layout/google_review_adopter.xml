@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="cityscann.com.city_scann.adapter.GoogleReviewAdopter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/review"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="30">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/reviewimage"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_weight="70">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textStyle="bold"
+                android:text="Name"
+                android:gravity="center"
+                android:textSize="21dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:id="@+id/txtname"/>
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/revrating"/>-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail"/>
+    </LinearLayout>
+
+</LinearLayout>

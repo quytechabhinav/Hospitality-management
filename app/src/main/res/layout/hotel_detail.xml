@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".activity.SupplierList">
+
+    <include layout="@layout/toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lay_footer"
+        android:layout_below="@+id/toolbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:id="@+id/hotel_detail_image"
+            android:layout_below="@+id/toolbar"
+            android:layout_height="185dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bar"
+            android:id="@+id/hotel_detail_tital"
+            android:layout_below="@+id/hotel_detail_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/hotel_detail_tital"
+            android:id="@+id/hotel_item_detail"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/barText"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/call"
+           android:orientation="horizontal"
+           android:id="@+id/bookatablelinear"
+           android:weightSum="100"
+           >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="Book a Table"
+            android:id="@+id/bookatable"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:background="@color/inroomdiningtextcolor"/>
+        <Button
+            android:layout_weight="50"
+            android:layout_alignParentRight="true"
+            android:layout_width="0dp"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:text="Menu"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/showmenu"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="@color/inroomdiningtextcolor"/>
+       </LinearLayout>
+         <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/bookatablelinear"
+               android:orientation="horizontal"
+               android:id="@+id/inroomdining"
+               android:weightSum="100"
+               android:layout_marginBottom="4dp"
+               >
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inroomdining"
+            android:orientation="horizontal"
+            android:id="@+id/inroomdiningb"
+            android:weightSum="100"
+            android:layout_marginBottom="4dp"
+            >
+            <Button
+
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/inroomdinning"
+                android:text="Menu"
+                android:visibility="gone"
+                android:textSize="21dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:background="@color/inroomdiningtextcolor"/>
+           <!-- <Button
+                android:layout_weight="50"
+                android:layout_alignParentRight="true"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/alldaymenu"
+                android:textAllCaps="false"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:text="All Day Menu"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:background="@color/inroomdiningtextcolor"/>-->
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Directory"
+            android:id="@+id/call"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/hotel_item_detail"
+            android:background="@color/inroomdiningtextcolor"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laundry"
+            android:id="@+id/laundry"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/inroomdiningb"
+            android:background="@color/inroomdiningtextcolor"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="House Keeping"
+            android:id="@+id/Keeping"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/laundry"
+            android:background="@color/inroomdiningtextcolor"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Keeping"
+            android:orientation="horizontal"
+            android:id="@+id/resturent"
+            android:weightSum="100"
+            >
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Book a Table"
+                android:id="@+id/resturenttable"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:background="@color/inroomdiningtextcolor"/>
+            <Button
+                android:layout_weight="50"
+                android:layout_alignParentRight="true"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Menu"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/Resturent"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@color/inroomdiningtextcolor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resturent"
+            android:orientation="horizontal"
+            android:id="@+id/laybar"
+            android:weightSum="100"
+            >
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Book a Table"
+                android:id="@+id/bartable"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:background="@color/inroomdiningtextcolor"/>
+            <Button
+                android:layout_weight="50"
+                android:layout_alignParentRight="true"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Bar Menu"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/bar"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@color/inroomdiningtextcolor"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/laybar"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_weight="50"
+                android:layout_alignParentRight="true"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Show My Oredrs"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/Bill"
+                android:textColor="@color/white"
+                android:textSize="21dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="@color/inroomdiningtextcolor"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

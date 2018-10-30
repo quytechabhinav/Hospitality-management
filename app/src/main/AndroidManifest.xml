@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cityscann.com.city_scann">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.javapapers.android.maps.path.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/logogold"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBw5-3uxOhAC-dJwYooikwOZ4Vfa2d4DSw" />
+
+        <receiver
+            android:name=".receiver.ServiceAtBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.selection_hotel"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SupplierList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SupplierDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubmitReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CategoryL2List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Review"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UsefulLinks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Search"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilterSupplierList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RestaurantList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CategoryList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HotelDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PropertyCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MapView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MapView_Detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilterSearchResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SupplierListTest"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.hotel_details" />
+        <activity android:name=".activity.ThirdLevel" />
+        <activity android:name=".activity.BookingResturent" />
+        <activity android:name=".activity.ShowMenu" />
+        <activity android:name=".activity.E_menu_category" />
+        <activity android:name=".activity.Menu_category_item" />
+        <activity android:name=".activity.Emenu_popup" />
+        <activity android:name=".activity.SPA_main" />
+        <activity android:name=".activity.Treatment_package" />
+        <activity android:name=".activity.SPA_First" />
+        <activity android:name=".activity.Logout" />
+        <activity android:name=".activity.Licence_agreement" />
+        <activity android:name=".activity.Home" />
+        <activity android:name=".activity.Spa_category" />
+        <activity android:name=".adapter.Spa_adapter" />
+        <activity android:name=".activity.SPA_category_item" />
+        <activity android:name=".adapter.Spa_category_itemAdapter" />
+        <activity android:name=".adapter.Spa_cart_adopter" />
+        <activity android:name=".activity.Laundry_category" />
+        <activity android:name=".adapter.Laundery_category_adapter" />
+        <activity android:name=".activity.Laundry_category_item" />
+        <activity android:name=".adapter.Laundry_category_itemAdapter" />
+        <activity android:name=".activity.house_keeping" />
+        <activity android:name=".adapter.House_keeping_Adapter" />
+        <activity android:name=".activity.Housekeeping_category_item" />
+        <activity android:name=".adapter.Housekeeping_category_itemAdaptor" />
+        <activity android:name=".activity.HouseKeepingCart" />
+        <activity android:name=".adapter.HousekeepingCardAddopter" />
+        <activity android:name=".activity.E_Resturent_category" />
+        <activity android:name=".adapter.E_Resturent_category_Adopter" />
+        <activity android:name=".activity.E_Resturent_category_item" />
+        <activity android:name=".adapter.resturent_category_itemAdaptor" />
+        <activity android:name=".adapter.ResturentcardAdopter" />
+        <activity android:name=".activity.bar_category" />
+        <activity android:name=".adapter.bar_categoryAdopter" />
+        <activity android:name=".activity.Bar_Category_Item" />
+        <activity android:name=".adapter.Bar_Item_Adopter" />
+        <activity android:name=".adapter.GoogleReviewAdopter" />
+        <activity android:name=".activity.ExtrnalApp" />
+        <activity android:name=".activity.Call_services" />
+        <activity
+            android:name=".activity.RoomtoRoom"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity android:name=".activity.Bill_Payment" />
+        <activity android:name=".activity.PaymentOrderList" />
+        <activity android:name=".adapter.PaymentOrderList_Adopter" />
+        <activity
+            android:name=".activity.Paymentcomment"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+    </application>
+
+</manifest>

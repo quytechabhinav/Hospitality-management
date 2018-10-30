@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cityscann.com.city_scann.activity.Licence_agreement">
+    <include layout="@layout/toolbar" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_below="@+id/toolbar"
+    android:layout_above="@+id/lay_footer"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtroom"
+    android:textStyle="bold"
+    android:textSize="21dp"
+    android:textColor="@color/black"
+    android:text="Your Room No : "/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txtroom"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/roomnumber"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomnumber"
+        android:id="@+id/txtname"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:textColor="@color/black"
+        android:text="Your Last Name : "/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_below="@+id/txtname"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/lastname"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtlicence"
+        android:layout_below="@+id/lastname"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:textColor="@color/black"
+        android:text="Show Aggrement"
+        />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtlicence"
+            android:layout_marginLeft="5dp"
+            android:textSize="16dp"
+            android:id="@+id/aggrement"
+            android:text=" I agree With Terms and Conditions"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_below="@+id/aggrement"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:layout_marginBottom="100dp"
+        android:textSize="21dp"
+        android:id="@+id/submit"
+        android:textColor="@color/white"
+        android:background="@drawable/greybackground"/>
+
+
+
+</RelativeLayout>
+
+</ScrollView>
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

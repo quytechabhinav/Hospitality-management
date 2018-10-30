@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/no_data"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data Found" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/data"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/lay_footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:layout_height="200dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_weight="50"
+                    android:background="@drawable/ola"
+                    android:id="@+id/ola"
+                    android:layout_height="155dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="50"
+                    android:id="@+id/uber"
+                    android:background="@drawable/uber"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_height="155dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <!--#d8dadc-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+</RelativeLayout>

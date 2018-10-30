@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:id="@+id/rat_lay"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:layout_width="50sp"
+            android:layout_height="60dp"
+            android:id="@+id/rat"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="Rating "/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rat"
+            android:layout_below="@id/toolbar"
+            android:layout_gravity="center"
+            android:id="@+id/ratingBar"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="false" />
+    <!--android:rating="1.0"-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:weightSum="2"
+        android:id="@+id/rev_head_lay_text"
+        android:layout_below="@+id/rat_lay">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="Write your Review"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:weightSum="2"
+        android:id="@+id/rev_head_lay"
+        android:layout_below="@+id/rev_head_lay_text">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="Title"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:id="@+id/review_head" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:weightSum="2"
+        android:id="@+id/rev"
+        android:layout_below="@+id/rev_head_lay">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:text="Details"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:id="@+id/review" />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/submit_rev"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/round_edges_button"
+        android:textAllCaps="false"
+        android:layout_below="@+id/rev"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

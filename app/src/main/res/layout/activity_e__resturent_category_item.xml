@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_category_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cityscann.com.city_scann.activity.Menu_category_item">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/no_data"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data Found" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/data"
+        android:visibility="visible"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/lay_footer">
+
+      <!--  <LinearLayout
+           android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/bookatable"
+           android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:id="@+id/img"
+                    android:layout_height="200dp" />
+                <TextView
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="100"
+                android:id="@+id/booktable"
+                android:padding="@dimen/activity_vertical_margin"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/linbookatable"
+                    android:layout_weight="50"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book A table For"
+                        android:id="@+id/txtbookatable"
+                        android:textSize="21dp"
+                        android:textColor="@color/colorPrimary"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="50"
+                    android:layout_alignRight="@+id/linbookatable"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sub"
+                        android:textSize="18sp"
+                        android:layout_marginRight="2dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@drawable/criclebtn"
+                        android:text="  -  "/>
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/ngest"
+                        android:layout_height="wrap_content"
+                        android:text=" 0 "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/add"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@drawable/criclebtn"
+                        android:text="  +  "/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+       </LinearLayout>-->
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_menu"
+            android:layout_below="@+id/bookatable"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/clal"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circle"
+                android:id="@+id/Opencart"
+                android:layout_height="100dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:background="@drawable/shoppingcart"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--#d8dadc-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

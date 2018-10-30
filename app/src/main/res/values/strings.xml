@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Dunston checks</string>
+    <!--  <string name="ip_address">http://cp10.sunhillsystems.in/cityscann/app/</string>
+    <string name="ip_address_images">http://cp10.sunhillsystems.in/cityscann/media/</string>-->
+    <!--<string name="ip_address">http://cp10.sunhillsystems.in/elite/app/</string>
+    <string name="ip_address_images">http://cp10.sunhillsystems.in/elite/media/</string>
+    <string name="ip_address_images_hotel">http://cp10.sunhillsystems.in/elite/media/hotel/</string>-->
+    <string name="ip_address">http://cityscann.in/app2/</string>
+    <string name="ip_address_images">http://cityscann.in/media/</string>
+    <string name="ip_address_images_hotel">http://cityscann.in/media/hotel/</string>
+    <string name="Rs">\u20B9</string>
+    <string name="space"> </string>
+    <string name="barText">A bar (also known as a saloon or a tavern or sometimes a pub or club, referring to the actual establishment, as in pub bar or club bar etc.) is a retail business establishment that serves alcoholic beverages, such as beer, wine, liquor, cocktails, and other beverages such as mineral water and soft drinks and often sell snack foods such as crisps or peanuts, for consumption on premises. Some types of bars, such as pubs, may also serve food from a restaurant menu</string>
+    <string name="searchText">Search for Restaurants, Bars, Cabs, Entertainment and more ...</string>
+</resources>

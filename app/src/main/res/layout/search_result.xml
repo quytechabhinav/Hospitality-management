@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="false"
+    android:layout_width="match_parent" >
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="5dp"
+        android:id="@+id/search_lay"
+        android:layout_below="@+id/toolbar">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:imeOptions="actionSearch"
+            android:id="@+id/search_bar"
+            android:layout_weight="2.4"
+            android:paddingLeft="10dp"
+            android:background="@drawable/search_edittext_border"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="5dp"
+            android:inputType="text"/>
+        <!--android:imeOptions="actionSearch"-->
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="35dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/round_edges_button"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="Search"
+            android:id="@+id/search_button" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay_sort"
+        android:layout_marginRight="10dp"
+        android:visibility="visible"
+        android:layout_below="@+id/search_lay">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FILTER"
+            android:padding="10dp"
+            android:layout_toRightOf="@+id/mapview"
+            android:textColor="@color/orange_darkShade"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:id="@+id/filter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="MAP VIEW"
+            android:textColor="@color/orange_darkShade"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:id="@+id/mapview"/>
+
+        <RadioGroup
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/sort"
+            android:layout_alignParentRight="true" >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sort_distance"
+                android:checked="true"
+                android:text="Distance"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sort_rating"
+                android:text="Rating"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By: "
+            android:textColor="#848484"
+            android:textSize="12sp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/spinner"
+            android:layout_toStartOf="@+id/spinner" />
+
+        <!--android:layout_toLeftOf="@+id/sort"
+        android:layout_toStartOf="@+id/sort"-->
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/spinner"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:src="@drawable/icon_arrow_down"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />-->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/no_data"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_below="@+id/lay_sort">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data Found" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/data"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/lay_sort">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:scrollbars="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+</RelativeLayout>

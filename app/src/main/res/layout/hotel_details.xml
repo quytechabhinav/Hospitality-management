@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hotel_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cityscann.com.city_scann.activity.hotel_details">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:id="@+id/sup_img"
+        android:background="@drawable/myhotelotel"
+        android:orientation="horizontal"
+        android:scaleType="centerCrop"
+        >  </LinearLayout>-->
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/sup_img"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brown_900"
+        android:textSize="21dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/htitle"
+        android:textStyle="bold"
+        android:text="My Hotel"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brown_900"
+        android:textSize="18dp"
+        android:paddingTop="2dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/htitle1"
+        android:textStyle="bold"
+        android:layout_below="@id/sup_img"
+        android:text="Address : "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brown_900"
+        android:textSize="14dp"
+        android:paddingTop="2dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/htitle3"
+        android:layout_below="@id/sup_img"
+        android:textStyle="bold"
+        android:text="An Iconic Symbol Of Las Vegas"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+    <TextView
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/brown_900"
+        android:id="@+id/hdetail"
+        android:layout_below="@id/sup_img"
+        android:textSize="15dp"
+        android:text="Home is not a place, but a feeling and at Stately Suites that’s exactly how we make you feel. The moment you check in to a refreshing welcome drink at the reception and walking into our comfortable contemporary clutter free rooms to our personalised and prompt services rendered by our diligent staff up until our 24x7 open kitchen serving delicious food tweaked to suit your taste palette."/>
+
+    <TextView
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textColor="@color/brown_900"
+        android:layout_below="@id/hdetail"
+        android:id="@+id/ctext"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        />
+      <TextView
+          android:textColor="@color/brown_900"
+          android:paddingTop="15dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Las Vegas Lok 1 \n\nPhone: ***********\nEmail ID: sales@gmail.com"
+          />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>
+</LinearLayout>

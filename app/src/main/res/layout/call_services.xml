@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cityscann.com.city_scann.activity.Call_services">
+    <include layout="@layout/toolbar"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:id="@+id/scroll"
+    android:layout_below="@+id/toolbar"
+    android:layout_above="@+id/lay_footer"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/data"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/lay_footer">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/unnamed"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/roomtoroom">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Room to Room"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/laundry"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/laundry">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laundry"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/resturent"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/restaurant">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/pool"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/pool">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pool"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/spa"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/spa">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Spa"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:background="@drawable/housekeeping"
+                android:layout_margin="5dp"
+                android:layout_height="180dp"
+                android:id="@+id/housekeeping">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="House Keeping"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/cast_expanded_controller_control_button_margin"
+                    android:textColor="@color/amber_50"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer"/>
+    </RelativeLayout>
+</RelativeLayout>

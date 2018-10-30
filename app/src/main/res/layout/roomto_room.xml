@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emenu_popup"
+    android:layout_width="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear_img"
+                android:weightSum="100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_weight="99"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Room Number to call : "
+                    android:textSize="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/black"/>
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/roomtoroomcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybackground"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:textSize="21dp"
+                android:padding="10dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text=" Call "/>
+
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView
+        android:background="#00534f4f"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right|top"
+        android:id="@+id/closed"
+        android:clickable="true"
+        android:src="@drawable/cross" />
+</FrameLayout>
+

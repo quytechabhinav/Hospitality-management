@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".activity.SupplierList">
+
+    <include layout="@layout/toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lay_footer"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context=".MainActivity" >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:textSize="21dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10sp"
+                android:text="Hello "
+                />
+
+            <!-- <Spinner
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/ngest"
+                 android:layout_alignParentTop="true"
+                 android:ems="10"
+                 android:background="@drawable/textarea"
+                 android:layout_marginBottom="10sp"
+                 android:id="@+id/title"
+                 android:hint="Gender">
+             </Spinner>-->
+
+            <EditText
+                android:id="@+id/Mobileno"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:hint="Mobile Number"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/Emailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:layout_below="@+id/mobile_no"
+                android:ems="10"
+                android:hint="Email ID"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10sp"
+                android:weightSum="100">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="40"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Table Size (Guest)"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" - "
+                    android:textStyle="bold"
+                    android:textSize="21dp"
+                    android:id="@+id/gsub"
+                    android:background="@drawable/textarea"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="0"
+                    android:id="@+id/gnum"
+                    android:textStyle="bold"
+                    android:textSize="21dp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="20"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" + "
+                    android:background="@drawable/textarea"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="21dp"
+                    android:id="@+id/gadd"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tablenu"
+                android:ems="10"
+                android:hint="Table Number"
+                android:textSize="18dp"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:layout_above="@+id/ngest"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Booking Date"
+                android:textSize="18dp"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:layout_above="@+id/ngest"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:id="@+id/type"
+                android:textSize="18dp"
+                android:textColor="@color/genre"
+                >
+            </Spinner>
+           <!-- <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ngest"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:id="@+id/time"
+                android:hint="Select Time">
+            </Spinner>-->
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:background="@drawable/textarea"
+                android:layout_marginBottom="10sp"
+                android:id="@+id/msg"
+                android:hint="Special requests"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnbook"
+                android:background="@color/colorPrimary"
+                android:text="Book Now"
+                android:textColor="@color/white"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/lay_footer"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/footer"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
